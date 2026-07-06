@@ -91,6 +91,9 @@ Le site gère un nombre illimité de photos.
 5. **Photos de Remplacement Haut de Gamme** :
    En attendant les vraies photos de Paul Mottet, nous avons injecté des URL Unsplash thématiques (charpente, maçonnerie, rénovation) libres de droits pour offrir une démo visuelle parfaite et professionnelle au premier démarrage.
 
+6. **Positionnement Dynamique des Blocs de la Devanture A4** :
+   Le bloc contenant le QR Code, la phrase d'explication et l'adresse URL a été sorti du conteneur central `.cover-body` pour devenir un descendant direct de `.cover-sheet`. Grâce au `display: flex` et `justify-content: space-between` appliqué au format A4, le titre et le sommaire se recentrent agréablement au milieu de la page tandis que le QR Code s'aligne automatiquement au pied du document physique.
+
 ---
 
 ## 📈 Tâches pour les Prochains Agents
