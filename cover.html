@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devanture de Dossier - Paul MOTTET</title>
+  
+  <!-- Favicon alternative -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📁</text></svg>">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cover-page-body">
+
+  <!-- Boutons d'actions flottants (visibles uniquement à l'écran) -->
+  <div class="print-actions">
+    <button class="btn" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><polygon points="6 9 6 2 18 2 18 9"></polygon><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Imprimer en A4 / PDF
+    </button>
+    <a href="index.html" class="btn btn-secondary" style="margin-left: 10px;">
+      Voir le Site Web
+    </a>
+  </div>
+
+  <!-- Feuille A4 de devanture de dossier -->
+  <div class="cover-sheet">
+    
+    <!-- En-tête -->
+    <div class="cover-header">
+      <div class="cover-name" id="cover-name">Paul MOTTET</div>
+      <div class="cover-contact">
+        <span id="cover-phone">+33 7 74 52 49 10</span>
+        <span>•</span>
+        <span id="cover-email">mottet2.paul6@outlook.fr</span>
+        <span>•</span>
+        <span id="cover-address">9 Rue Choiseul, 01210 Ferney-Voltaire</span>
+      </div>
+    </div>
+
+    <!-- Corps de la devanture -->
+    <div class="cover-body">
+      <div class="cover-subtitle">Dossier de Candidature</div>
+      <div class="cover-title" id="cover-title">
+        Candidature au poste de<br>
+        Vendeur en Boulangerie / Employé Polyvalent
+      </div>
+
+      <!-- Sommaire du dossier physique -->
+      <div class="cover-summary-box">
+        <h3>Sommaire</h3>
+        <ul>
+          <li>Curriculum Vitae (CV)</li>
+          <li>Lettre de Recommandation</li>
+          <li>Certificats de Travail</li>
+        </ul>
+      </div>
+
+      <!-- Section QR Code pour documents supplémentaires -->
+      <div class="cover-qr-section">
+        <img id="cover-qr" class="qr-code-img" src="" alt="QR Code de candidature">
+        <div class="cover-qr-text">
+          Pour consulter l'intégralité de mes certificats de travail, mes lettres de recommandation d'anciens employeurs et des photos de mes réalisations complémentaires, scannez le QR code ci-dessus ou saisissez l'adresse :
+          <div class="cover-url" id="cover-url">paul-mottet.github.io/candidature_suisse/</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Chargement des données -->
+  <script src="data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Injection dynamique des textes pour rester synchrone avec data.js
+      document.getElementById('cover-name').innerText = DATA.profile.name;
+      document.getElementById('cover-title').innerHTML = `Candidature au poste de<br><strong>${DATA.profile.title}</strong>`;
+      document.getElementById('cover-phone').innerText = DATA.profile.phone;
+      document.getElementById('cover-email').innerText = DATA.profile.email;
+      document.getElementById('cover-address').innerText = DATA.profile.address;
+
+      // Nettoyer l'URL du site web pour l'affichage (supprimer https:// et les slashs de fin)
+      let displayUrl = DATA.profile.websiteUrl
+        .replace(/https?:\/\//i, '')
+        .replace(/\/$/, '');
+      document.getElementById('cover-url').innerText = displayUrl;
+
+      // Génération dynamique du QR Code
+      const qrImage = document.getElementById('cover-qr');
+      // Nous utilisons l'API sécurisée et gratuite de QRServer pour générer le code QR instantanément
+      const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(DATA.profile.websiteUrl)}`;
+      qrImage.src = apiUrl;
+    });
+  </script>
+</body>
+</html>
