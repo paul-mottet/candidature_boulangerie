@@ -191,6 +191,14 @@ section {
   opacity: 1;
 }
 
+#batiment-section {
+  margin-top: 50px; /* Marge au-dessus de la section bâtiment */
+}
+
+#programming-section {
+  margin-top: 60px; /* Marge au-dessus de la section programmation */
+}
+
 .section-title {
   font-size: 2rem;
   margin-bottom: 40px;
@@ -675,6 +683,7 @@ footer {
   background-color: var(--accent-dark);
   color: var(--accent-light);
   font-size: 0.9rem;
+  margin-top: 80px; /* Marge au-dessus du pied de page */
 }
 
 footer p {

@@ -363,26 +363,35 @@
         }
       });
 
-      // 8. Déroulement des Projets Personnels
+      // 8. Déroulement / Repli des Projets Personnels
       const showProjectsBtn = document.getElementById('show-personal-projects-btn');
       const projectsWrapper = document.getElementById('personal-projects-wrapper');
-      const triggerContainer = document.getElementById('personal-projects-trigger-container');
 
       showProjectsBtn.addEventListener('click', () => {
-        // Afficher la section
-        projectsWrapper.classList.add('active');
-        
-        // Masquer le bouton de déclenchement
-        triggerContainer.style.display = 'none';
-        
-        // Faire défiler vers les projets de manière fluide
-        setTimeout(() => {
-          projectsWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+        const isActive = projectsWrapper.classList.contains('active');
+        if (isActive) {
+          // Replier
+          projectsWrapper.classList.remove('active');
+          showProjectsBtn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            Dérouler mes projets personnels (Travaux manuels & Programmation)
+          `;
+          // Faire défiler vers le haut
+          document.getElementById('documents-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Dérouler
+          projectsWrapper.classList.add('active');
+          showProjectsBtn.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            Replier mes projets personnels
+          `;
+          // Faire défiler vers le bas de manière fluide
+          setTimeout(() => {
+            projectsWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
       });
     });
   </script>
-</body>
-</html>
 </body>
 </html>

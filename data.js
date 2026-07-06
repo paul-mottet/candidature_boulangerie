@@ -74,6 +74,12 @@ const DATA = {
       tags: ["JavaScript", "HTML5", "CSS3"],
       link: "#",
       requiresAuth: true
+    },
+    {
+      title: "Site de Candidature & Dossier Numérique",
+      description: "Codé avec Copilot. Conception de ce site web de présentation de profil et de la devanture de dossier A4 avec QR Code dynamique.",
+      tags: ["HTML5", "CSS3", "JavaScript"],
+      link: "https://github.com/paul-mottet/candidature_suisse"
     }
   ],
   
