@@ -58,15 +58,22 @@ const DATA = {
   projects: [
     {
       title: "Lexica Android",
-      description: "Application Android native de gestion de vocabulaire et d'extraits littéraires. Inclut des scripts d'analyse de données en Python.",
+      description: "Codé avec Copilot. Application Android native de gestion de vocabulaire et d'extraits littéraires. Inclut des scripts d'analyse de données en Python.",
       tags: ["Kotlin", "Android SDK", "Python"],
       link: "https://github.com/r0xef/LexicaAndroid2"
     },
     {
       title: "Pipeline de traitement OCR",
-      description: "Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
+      description: "Codé avec Copilot. Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
       tags: ["Python", "JSON", "Data Extraction"],
       link: "https://github.com/r0xef/LexicaAndroid2/tree/master/mots_et_extraits"
+    },
+    {
+      title: "Site web révision et QCM",
+      description: "Codé avec Copilot. Plateforme web interactive d'entraînement aux examens et questionnaires à choix multiples.",
+      tags: ["JavaScript", "HTML5", "CSS3"],
+      link: "#",
+      requiresAuth: true
     }
   ],
   

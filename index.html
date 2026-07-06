@@ -10,13 +10,15 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥖</text></svg>">
   
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Statistiques de visite (GoatCounter - Sans cookies / RGPD) -->
+  <script data-goatcounter="https://paul-mottet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 
   <!-- Hero Section / Header -->
   <header>
     <div class="container">
-      <span class="profile-badge" id="profile-badge">Candidature</span>
       <h1 id="profile-name">Paul MOTTET</h1>
       <h2 id="profile-title">Vendeur en Boulangerie / Employé Polyvalent</h2>
       <p class="profile-bio" id="profile-bio">
@@ -65,37 +67,57 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Section Travaux Bâtiment (Photos) -->
-  <section class="container" id="batiment-section">
-    <h2 class="section-title">Réalisations & Travaux Manuels</h2>
-    <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
-      Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie, rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à travailler physiquement.
-    </p>
-    <div class="gallery-grid" id="gallery-grid">
-      <!-- Rempli par JavaScript -->
+    <!-- Bouton pour dérouler les projets personnels -->
+    <div style="text-align: center; margin-top: 50px;" id="personal-projects-trigger-container">
+      <button id="show-personal-projects-btn" class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        Dérouler mes projets personnels (Travaux manuels & Programmation)
+      </button>
     </div>
   </section>
 
-  <!-- Section Programmation & Projets Git -->
-  <section class="container" id="programming-section">
-    <h2 class="section-title">Projets de Programmation</h2>
-    <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
-      Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles.
-    </p>
-    <div class="projects-grid" id="projects-grid">
-      <!-- Rempli par JavaScript -->
-    </div>
-  </section>
+  <!-- Enveloppe pour les projets personnels masqués d'office -->
+  <div id="personal-projects-wrapper" class="personal-projects-wrapper">
+    <!-- Section Travaux Bâtiment (Photos) -->
+    <section class="container" id="batiment-section">
+      <h2 class="section-title">Réalisations & Travaux Manuels</h2>
+      <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
+        Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie, rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à travailler physiquement.
+      </p>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rempli par JavaScript -->
+      </div>
+    </section>
 
-  <!-- Lightbox Modal -->
+    <!-- Section Programmation & Projets Git -->
+    <section class="container" id="programming-section">
+      <h2 class="section-title">Projets de Programmation</h2>
+      <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
+        Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles.
+      </p>
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rempli par JavaScript -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Lightbox Modal (Photos de travaux) -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightbox-close" aria-label="Fermer la galerie">&times;</button>
     <img class="lightbox-content" id="lightbox-img" src="" alt="Agrandissement de réalisation">
     <div class="lightbox-caption" id="lightbox-caption">
       <h4 id="lightbox-title"></h4>
       <p id="lightbox-desc"></p>
+    </div>
+  </div>
+
+  <!-- Modal Notification / Accès Restreint / Copie lien -->
+  <div class="lightbox" id="alert-modal">
+    <div style="background-color: var(--bg-secondary); padding: 30px; border-radius: var(--border-radius); max-width: 450px; width: 90%; color: var(--text-main); text-align: center; box-shadow: var(--hover-shadow); display: flex; flex-direction: column; align-items: center; gap: 20px;">
+      <h4 id="alert-title" style="color: var(--accent-dark); font-size: 1.3rem;">Accès Restreint</h4>
+      <p id="alert-message" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;"></p>
+      <button id="alert-close" class="btn" style="padding: 10px 24px;">Fermer</button>
     </div>
   </div>
 
@@ -114,7 +136,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       // 1. Chargement des infos de profil
       document.title = `${DATA.profile.name} - Candidature ${DATA.profile.title}`;
-      document.getElementById('profile-badge').innerText = "Candidature Suisse";
       document.getElementById('profile-name').innerText = DATA.profile.name;
       document.getElementById('profile-title').innerText = DATA.profile.title;
       document.getElementById('profile-bio').innerText = DATA.profile.bio;
@@ -135,11 +156,36 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           ${DATA.profile.address}
         </span>
-        <a href="${DATA.profile.github}" target="_blank" class="contact-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          Projets GitHub
+        <a href="#" id="share-btn" class="contact-item" style="cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          Partager le dossier
         </a>
       `;
+
+      // Fonction d'affichage des pop-ups d'alerte (Accès restreint / Copie de lien)
+      window.showNotificationPopup = (message, title = "Notification") => {
+        document.getElementById('alert-title').innerText = title;
+        document.getElementById('alert-message').innerText = message;
+        document.getElementById('alert-modal').classList.add('active');
+      };
+
+      // Gestionnaire de clic du bouton Partager
+      document.getElementById('share-btn').addEventListener('click', (e) => {
+        e.preventDefault();
+        if (navigator.share) {
+          navigator.share({
+            title: `Paul MOTTET - Dossier de Candidature`,
+            text: `Consultez le dossier de candidature en ligne de Paul MOTTET.`,
+            url: window.location.origin + window.location.pathname
+          }).catch(console.error);
+        } else {
+          navigator.clipboard.writeText(window.location.origin + window.location.pathname).then(() => {
+            showNotificationPopup("Lien de candidature copié dans le presse-papiers ! Vous pouvez maintenant le coller pour le partager.", "Partager");
+          }).catch(err => {
+            showNotificationPopup("Impossible de copier automatiquement le lien. Copiez l'URL depuis la barre d'adresse de votre navigateur.", "Partager");
+          });
+        }
+      });
 
       // 2. Gestion du CV Principal
       const cvDoc = DATA.documents.find(doc => doc.id === 'cv');
@@ -154,7 +200,7 @@
         const frameWrapper = document.getElementById('cv-frame-wrapper');
         frameWrapper.innerHTML = `<iframe src="${cvPath}#toolbar=0" title="CV ${DATA.profile.name}"></iframe>`;
       } else {
-        // Si le CV n'est pas configuré disponible
+        // Si le CV n'est pas disponible
         document.getElementById('cv-frame-wrapper').innerHTML = `
           <div style="padding: 100px 20px; text-align: center; color: var(--text-muted);">
             <h3>Le CV est en cours de mise à jour</h3>
@@ -239,6 +285,7 @@
         card.className = 'project-card';
         
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        const isAuth = project.requiresAuth === true;
         
         card.innerHTML = `
           <div class="project-card-top">
@@ -246,11 +293,23 @@
             <p>${project.description}</p>
             <div class="project-tags">${tagsHTML}</div>
           </div>
-          <a href="${project.link}" target="_blank" class="project-link">
-            Voir le code source
+          <a href="${project.link}" ${isAuth ? '' : 'target="_blank"'} class="project-link ${isAuth ? 'restricted-link' : ''}">
+            ${isAuth ? 'Accéder au site' : 'Voir le code source'}
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         `;
+        
+        // Clic sur QCM restrictif
+        if (isAuth) {
+          card.querySelector('.restricted-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            showNotificationPopup(
+              "Pour accéder au site vous devez vous connecter depuis votre espace étudiant Université de Savoie Mont Blanc.",
+              "Accès Restreint"
+            );
+          });
+        }
+        
         projectsGrid.appendChild(card);
       });
 
@@ -289,7 +348,41 @@
           lightbox.classList.remove('active');
         }
       });
+
+      // 7. Logique du Modal d'alerte global
+      const alertModal = document.getElementById('alert-modal');
+      const alertClose = document.getElementById('alert-close');
+
+      alertClose.addEventListener('click', () => {
+        alertModal.classList.remove('active');
+      });
+
+      alertModal.addEventListener('click', (e) => {
+        if (e.target === alertModal || e.target === alertClose) {
+          alertModal.classList.remove('active');
+        }
+      });
+
+      // 8. Déroulement des Projets Personnels
+      const showProjectsBtn = document.getElementById('show-personal-projects-btn');
+      const projectsWrapper = document.getElementById('personal-projects-wrapper');
+      const triggerContainer = document.getElementById('personal-projects-trigger-container');
+
+      showProjectsBtn.addEventListener('click', () => {
+        // Afficher la section
+        projectsWrapper.classList.add('active');
+        
+        // Masquer le bouton de déclenchement
+        triggerContainer.style.display = 'none';
+        
+        // Faire défiler vers les projets de manière fluide
+        setTimeout(() => {
+          projectsWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      });
     });
   </script>
+</body>
+</html>
 </body>
 </html>
