@@ -599,7 +599,8 @@ section {
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--accent-dark);
-  margin-bottom: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
   line-height: 1.3;
 }
 
