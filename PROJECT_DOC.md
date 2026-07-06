@@ -98,5 +98,5 @@ Le site gère un nombre illimité de photos.
 
 ## 📈 Tâches pour les Prochains Agents
 - [ ] Remplacer les URL d'images Unsplash dans `data.js` par les chemins locaux des vraies photos de chantiers fournies par Paul.
-- [ ] Une fois que Paul aura téléversé sa lettre de recommandation et ses certificats de travail physiques, mettre à jour leur `status: "disponible"` dans `data.js`.
+- [x] Une fois que Paul aura téléversé sa lettre de recommandation et ses certificats de travail physiques, mettre à jour leur `status: "disponible"` dans `data.js`.
 - [ ] Aider Paul à configurer son Git et à déployer le site sur GitHub Pages (branche `main` ou `gh-pages` pointant vers le dépôt `paul-mottet/candidature_suisse`).

@@ -25,32 +25,60 @@ const DATA = {
       description: "Mon CV détaillé avec mon parcours en vente, boulangerie et restauration."
     },
     {
-      id: "lettre_recommandation",
-      name: "Lettre de Recommandation",
-      file: "documents/lettre_recommandation.pdf",
-      status: "a_venir",
-      description: "Lettre de recommandation rédigée par un ancien employeur dans la restauration / vente."
+      id: "lettre_recommandation_buffalo",
+      name: "Lettre de Recommandation - Buffalo Grill",
+      file: "documents/lettre_recommendation_buffalo.pdf",
+      status: "disponible",
+      description: "Lettre rédigée par la directrice du restaurant Buffalo Grill de Bourg-lès-Valence attestant de mon professionnalisme en cuisine."
     },
     {
       id: "certificat_valmar",
       name: "Certificat de travail - Fournil de Valmar",
-      file: "documents/certificat_valmar.pdf",
-      status: "a_venir",
-      description: "Certificat officiel attestant de mon rôle de vendeur en boulangerie (façonnage, caisse, accueil)."
+      file: "documents/certificat_travail_valmar.pdf",
+      status: "disponible",
+      description: "Certificat officiel attestant de mes compétences de vendeur en boulangerie (façonnage, cuisson, accueil, caisse)."
     },
     {
       id: "certificat_cle_de_sol",
       name: "Certificat de travail - La Clé de Sol",
-      file: "documents/certificat_cle_de_sol.pdf",
-      status: "a_venir",
-      description: "Certificat pour mon poste de serveur en établissement à haute exigence."
+      file: "documents/certificat_travail_clee_de_sol.pdf",
+      status: "disponible",
+      description: "Certificat pour mon poste de serveur en établissement."
     },
     {
       id: "certificat_lounge",
       name: "Certificat de travail - Le Lounge",
-      file: "documents/certificat_lounge.pdf",
-      status: "a_venir",
-      description: "Certificat pour mon poste de cuisinier et gestion autonome de la cuisine."
+      file: "documents/certificat_travail_le_lounge.pdf",
+      status: "disponible",
+      description: "Certificat officiel pour mon poste de cuisinier."
+    },
+    {
+      id: "certificat_buffalo",
+      name: "Certificat de travail - Buffalo Grill",
+      file: "documents/certificat_travail_buffalo.pdf",
+      status: "disponible",
+      description: "Certificat pour mon poste d'agent de restauration et grillardin."
+    },
+    {
+      id: "certificat_lidl",
+      name: "Certificat de travail - Lidl",
+      file: "documents/certificat_travail_lidl.pdf",
+      status: "disponible",
+      description: "Certificat de travail pour mon poste d'opérateur logistique."
+    },
+    {
+      id: "certificat_aml_plongeur",
+      name: "Certificat de travail - Plongeur (A.M.L. SARL)",
+      file: "documents/certificat_travail_fondu.pdf",
+      status: "disponible",
+      description: "Certificat de travail pour mon poste de plongeur au bord du lac à Tresserve."
+    },
+    {
+      id: "diplome_bac",
+      name: "Attestation de réussite - Baccalauréat",
+      file: "documents/BACCALAUREAT GENERAL_240226_204710.pdf",
+      status: "disponible",
+      description: "Diplôme du Baccalauréat Général, série Scientifique (Mention Assez Bien)."
     }
   ],
   
