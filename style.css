@@ -911,11 +911,12 @@ footer p {
   .cover-sheet {
     box-shadow: none;
     border: none;
-    width: 100%;
-    height: 100vh;
+    width: 210mm;
+    height: 297mm;
     padding: 10mm 15mm 15mm 15mm; /* Commencer l'en-tête plus haut à l'impression */
     page-break-after: avoid;
     page-break-before: avoid;
+    box-sizing: border-box;
   }
 
   .cover-summary-box {
