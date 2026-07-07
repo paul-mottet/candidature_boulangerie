@@ -309,6 +309,7 @@
 
       complementDocs.forEach(doc => {
         const isAvail = doc.status === 'disponible';
+        const isRecommande = doc.recommended === true;
 
         const card = document.createElement('div');
         card.className = `document-card ${!isAvail ? 'pending' : ''}`;
@@ -328,12 +329,15 @@
             </span>`;
         }
 
+        let badgesHTML = `<span class="badge ${isAvail ? 'badge-disponible' : 'badge-a_venir'}">${isAvail ? 'Disponible' : 'A venir'}</span>`;
+        if (isRecommande) {
+          badgesHTML += ` <span class="badge badge-recommande">★ Recommandé</span>`;
+        }
+
         card.innerHTML = `
           <div class="document-card-header">
             <span class="document-title">${doc.name}</span>
-            <span class="badge ${isAvail ? 'badge-disponible' : 'badge-a_venir'}">
-              ${isAvail ? 'Disponible' : 'A venir'}
-            </span>
+            <div class="document-badges">${badgesHTML}</div>
           </div>
           <p class="document-desc">${doc.description}</p>
           ${actionButtonHTML}

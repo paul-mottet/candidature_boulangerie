@@ -362,6 +362,18 @@ section {
   color: #E65100;
 }
 
+.document-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge-recommande {
+  background-color: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FCD34D;
+}
+
 .document-desc {
   font-size: 0.9rem;
   color: var(--text-muted);

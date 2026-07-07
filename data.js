@@ -10,9 +10,9 @@ const DATA = {
     address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
     github: "https://github.com/r0xef", // Votre GitHub principal
     websiteUrl: "https://paul-mottet.github.io/candidature_suisse/", // URL GitHub Pages
-    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement.",
-    batimentBio: "Au-delà de la vente et de la restauration, j'ai également de l'expérience dans les métiers du bâtiment. J'y ai travaillé un peu comme salarié, mais surtout comme sous-traitant (pour des entreprises comme Carrelage Mallisard, SARL Melconfort, Alena, Mobilier Singulier...) puis comme indépendant. Cela m'a permis d'acquérir un savoir-faire dans différents corps de métier et de réaliser des projets personnels, comme l'acquisition et la rénovation d'un appartement en Ardèche. Ces expériences témoignent de ma rigueur, de mon habileté manuelle et de ma capacité à travailler physiquement.",
-    programmingBio: "Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles."
+    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement, pour des horaires en journée comme matinaux et un rythme de travail soutenu.",
+    batimentBio: "Au-delà de la vente et de la restauration, j'ai également de l'expérience dans les métiers du bâtiment. J'y ai travaillé un peu comme salarié, mais surtout comme sous-traitant (pour des entreprises comme Carrelage Mallisard, SARL Melconfort, Alena, Mobilier Singulier...) puis comme indépendant. Cela m'a permis d'acquérir un savoir-faire dans différents corps de métiers et de réaliser des projets personnels, comme l'acquisition et la rénovation d'un appartement en Ardèche. Ces expériences témoignent de ma rigueur, de mon habileté manuelle et de ma capacité à travailler physiquement.",
+    programmingBio: "J'ai découvert il y a peu de temps que tout le monde pouvait, aujourd'hui, développer des outils numériques grâce aux moyens fournis par l'IA, sans avoir besoin d'énormément de connaissances préalables en informatique. C'est devenu l'un de mes passe-temps entre les différents contrats de travail que j'ai eus. Je pourrais ainsi vous venir en aide au besoin pour la gestion de votre site web ou en cas de problème informatique."
   },
 
   // Liste des documents officiels (CV, lettres de recommandation, certificats de travail)
@@ -31,6 +31,7 @@ const DATA = {
       name: "Lettre de Recommandation - Buffalo Grill",
       file: "documents/lettre_recommendation_buffalo.pdf",
       status: "disponible",
+      recommended: true,
       description: "Lettre rédigée par la directrice du restaurant Buffalo Grill de Bourg-lès-Valence."
     },
     {
@@ -118,7 +119,7 @@ const DATA = {
     {
       id: "appartement-annonay",
       title: "Rénovation d'Appartement (Annonay)",
-      description: "Achat et rénovation complète d'un appartement. Travaux réalisés : démolition, isolation, plaques de plâtre (placo), électricité générale, plomberie, réstauration du plancher, création d'une salle de bain.",
+      description: "Achat et rénovation complète d'un appartement. Travaux réalisés : démolition, isolation, plaques de plâtre (placo), électricité générale, plomberie, restauration du plancher, création d'une salle de bain.",
       category: "Rénovation complète",
       folder: "photos/batiment/Appart-Annonay",
       photos: [
@@ -182,7 +183,7 @@ const DATA = {
     {
       id: "autres-travaux",
       title: "Autres chantiers & interventions",
-      description: "quelque uns des autres chantier auxquels j'ai pu participer à mon compte ou dans le cadre de sous-traitances : ragréage et pose de carrelage au sol, travaux maçonnerie, réalisation et pose de plateau en bois pour restaurant, et finitions diverses.",
+      description: "Quelques-uns des autres chantiers auxquels j'ai pu participer à mon compte ou dans le cadre de sous-traitances : ragréage et pose de carrelage au sol, travaux de maçonnerie, réalisation et pose de plateaux en bois pour restaurant, et finitions diverses.",
       category: "Polyvalent & Finitions",
       folder: "photos/batiment/autres",
       photos: [
