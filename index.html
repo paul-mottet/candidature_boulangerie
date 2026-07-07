@@ -259,12 +259,22 @@
             await page.render(renderContext).promise;
           }
         } catch (error) {
-          console.error("Erreur lors du rendu du PDF par PDF.js : ", error);
-          container.innerHTML = `
-            <div style="padding: 40px 20px; text-align: center; color: var(--text-muted);">
-              <p style="margin-bottom:15px;">Une erreur s'est produite lors de l'affichage en ligne du CV.</p>
-              <a href="${url}" class="btn" target="_blank">Ouvrir le PDF directement</a>
-            </div>`;
+          console.error("Erreur lors du rendu du PDF par PDF.js (utilisation du fallback) : ", error);
+          
+          // Détecter si on est sur mobile
+          const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+          
+          if (!isMobile) {
+            // Sur PC desktop, l'iframe fonctionne sans problème pour le protocole file://
+            container.innerHTML = `<iframe src="${url}#toolbar=0" title="CV ${DATA.profile.name}" style="width:100%; height:100%; border:none;"></iframe>`;
+          } else {
+            // Sur mobile, on affiche un message clair avec lien direct
+            container.innerHTML = `
+              <div style="padding: 40px 20px; text-align: center; color: var(--text-muted); display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+                <p style="margin-bottom: 20px;">L'aperçu du CV n'a pas pu être chargé sur cet appareil.</p>
+                <a href="${url}" class="btn" target="_blank">Consulter le CV (PDF)</a>
+              </div>`;
+          }
         }
       }
 

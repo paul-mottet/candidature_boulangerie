@@ -129,7 +129,6 @@ const DATA = {
         "photos/batiment/Appart-Annonay/20230227_173039.jpg",
         "photos/batiment/Appart-Annonay/20230228_135421.jpg",
         "photos/batiment/Appart-Annonay/20230310_093251.jpg",
-        "photos/batiment/Appart-Annonay/20240516_105843.jpg",
         "photos/batiment/Appart-Annonay/20240516_105858.jpg",
         "photos/batiment/Appart-Annonay/20250805_172428.jpg"
       ]
