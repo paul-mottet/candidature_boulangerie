@@ -36,7 +36,9 @@ profile: {
   address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
   github: "https://github.com/r0xef",
   websiteUrl: "https://paul-mottet.github.io/candidature_suisse/",
-  bio: "..."
+  bio: "...", // Votre biographie d'en-tête
+  batimentBio: "...", // Description de la section Bâtiment
+  programmingBio: "..." // Description de la section Informatique
 }
 ```
 
@@ -85,8 +87,8 @@ Le site organise vos réalisations sous forme de **projets** pour éviter de sur
 1. **Architecture "No-Build" & Centralisation (`data.js`)** :
    Pour éliminer le besoin de frameworks complexes (Vite/Next.js) qui ralentissent le chargement et compliquent les éditions par des tiers, le site utilise du Vanilla JS. L'objet `DATA` sert d'unique source de vérité pour le site et la devanture de dossier.
    
-2. **Visualisation Double-Couche du CV** :
-   Sur grand écran, le CV s'affiche directement dans un cadre stylisé en format papier grâce à une balise `<iframe>`. Sur mobile (où les navigateurs peinent à afficher les PDF de manière interactive), le CSS désactive le cadre et affiche un bouton de téléchargement et de consultation plein écran très ergonomique.
+2. **Rendu Universel de CV via PDF.js** :
+   Pour résoudre les problèmes d'affichage des fichiers PDF (les balises `<iframe>` ou `<embed>` étant souvent bloquées, mal dimensionnées ou forçant le téléchargement sur mobiles iOS/Android), le site charge la bibliothèque standard **PDF.js**. Le document PDF est converti dynamiquement en canevas d'images (canvas) directement sur la page, offrant un aperçu défilable natif, net et identique sur tous les types d'écrans (ordinateurs et téléphones).
 
 3. **Devanture de Dossier Imprimable (`cover.html`)** :
    Création d'une page A4 autonome qui n'est pas liée sur la navigation du site. Elle intègre un script qui génère un QR code à la volée vers l'URL du site en utilisant l'API `qrserver.com`. 

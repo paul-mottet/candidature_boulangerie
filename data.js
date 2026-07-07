@@ -10,7 +10,9 @@ const DATA = {
     address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
     github: "https://github.com/r0xef", // Votre GitHub principal
     websiteUrl: "https://paul-mottet.github.io/candidature_suisse/", // URL GitHub Pages
-    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente de boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement."
+    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement.",
+    batimentBio: "Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie, rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à travailler physiquement.",
+    programmingBio: "Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles."
   },
 
   // Liste des documents officiels (CV, lettres de recommandation, certificats de travail)

@@ -252,9 +252,24 @@ section {
   width: 100%;
   height: 650px;
   border-radius: 8px;
-  overflow: hidden;
-  background-color: #f0f0f0;
+  overflow-y: auto;
+  background-color: var(--accent-light);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.pdf-page-canvas {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 4px 15px rgba(74, 62, 61, 0.1);
+  background-color: #fff;
+  display: block;
+}
+
+.pdf-page-canvas:last-child {
+  margin-bottom: 0;
 }
 
 .cv-frame-wrapper iframe {
@@ -905,11 +920,13 @@ footer p {
   }
   
   .cv-frame-wrapper {
-    display: none; /* Cache l'iframe car elle est inutilisable sur mobile */
+    display: block;
+    height: 480px;
   }
 
   .cv-fallback-mobile {
-    display: block; /* Affiche le bouton de téléchargement direct */
+    display: block;
+    padding: 20px 0 0 0;
   }
 
   .cover-sheet {
