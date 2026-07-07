@@ -367,10 +367,15 @@ section {
   transition: var(--transition);
   cursor: pointer;
   position: relative;
+  border: 1px solid var(--accent-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .gallery-item:hover {
   transform: translateY(-6px);
+  border-color: var(--accent-gold);
   box-shadow: var(--hover-shadow);
 }
 
@@ -393,29 +398,89 @@ section {
   transform: scale(1.05);
 }
 
-.gallery-info {
-  padding: 20px;
+/* Badges sur l'image */
+.gallery-category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--accent-gold);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.gallery-category {
+.gallery-count-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(44, 42, 41, 0.75);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
   font-size: 0.75rem;
-  color: var(--accent-gold-hover);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  margin-bottom: 6px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.gallery-info-text {
+  margin-bottom: 16px;
 }
 
 .gallery-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
   color: var(--accent-dark);
 }
 
 .gallery-desc {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Lien d'action style CTA secondaire */
+.gallery-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent-gold-hover);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.gallery-item:hover .gallery-link {
+  color: var(--accent-dark);
+}
+
+.gallery-link svg {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-link svg {
+  transform: translateX(4px);
 }
 
 /* Section Programmation / Projets Git */
@@ -520,6 +585,9 @@ section {
   margin-top: 20px;
   text-align: center;
   font-family: var(--font-title);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .lightbox-caption h4 {
@@ -531,6 +599,8 @@ section {
 .lightbox-caption p {
   color: #ccc;
   font-size: 0.95rem;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .lightbox-close {
@@ -544,10 +614,86 @@ section {
   cursor: pointer;
   line-height: 1;
   transition: var(--transition);
+  z-index: 1020;
 }
 
 .lightbox-close:hover {
   color: var(--accent-gold);
+}
+
+/* Boutons de navigation de la Lightbox */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1010;
+  user-select: none;
+  padding: 0;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.4);
+}
+
+.lightbox-prev:active,
+.lightbox-next:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.lightbox-prev svg,
+.lightbox-next svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+/* Compteur de photos dans la Lightbox */
+.lightbox-counter {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Responsive pour les boutons Lightbox */
+@media (max-width: 768px) {
+  .lightbox-prev,
+  .lightbox-next {
+    width: 46px;
+    height: 46px;
+  }
+  .lightbox-prev {
+    left: 15px;
+  }
+  .lightbox-next {
+    right: 15px;
+  }
 }
 
 /* Devanture de dossier (Cover Page HTML spécifique) */

@@ -10,9 +10,9 @@ const DATA = {
     address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
     github: "https://github.com/r0xef", // Votre GitHub principal
     websiteUrl: "https://paul-mottet.github.io/candidature_suisse/", // URL GitHub Pages
-    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente de boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis entièrement disponible pour des horaires matinaux et physiques en Suisse."
+    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente de boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement."
   },
-  
+
   // Liste des documents officiels (CV, lettres de recommandation, certificats de travail)
   // - status: "disponible" (le document est accessible et téléchargeable)
   // - status: "a_venir" (le document s'affiche avec la mention "Bientôt disponible")
@@ -29,28 +29,28 @@ const DATA = {
       name: "Lettre de Recommandation - Buffalo Grill",
       file: "documents/lettre_recommendation_buffalo.pdf",
       status: "disponible",
-      description: "Lettre rédigée par la directrice du restaurant Buffalo Grill de Bourg-lès-Valence attestant de mon professionnalisme en cuisine."
+      description: "Lettre rédigée par la directrice du restaurant Buffalo Grill de Bourg-lès-Valence."
     },
     {
       id: "certificat_valmar",
       name: "Certificat de travail - Fournil de Valmar",
       file: "documents/certificat_travail_valmar.pdf",
       status: "disponible",
-      description: "Certificat officiel attestant de mes compétences de vendeur en boulangerie (façonnage, cuisson, accueil, caisse)."
+      description: "Certificat pour mon poste de vendeur en boulangerie."
     },
     {
       id: "certificat_cle_de_sol",
       name: "Certificat de travail - La Clé de Sol",
       file: "documents/certificat_travail_clee_de_sol.pdf",
       status: "disponible",
-      description: "Certificat pour mon poste de serveur en établissement."
+      description: "Certificat pour mon poste de serveur."
     },
     {
       id: "certificat_lounge",
       name: "Certificat de travail - Le Lounge",
       file: "documents/certificat_travail_le_lounge.pdf",
       status: "disponible",
-      description: "Certificat officiel pour mon poste de cuisinier."
+      description: "Certificat pour mon poste de cuisinier, dans cet établissement j'étais initialement serveur et mon passage en cuisine n'a pas été formalisé administrativement."
     },
     {
       id: "certificat_buffalo",
@@ -68,20 +68,20 @@ const DATA = {
     },
     {
       id: "certificat_aml_plongeur",
-      name: "Certificat de travail - Plongeur (A.M.L. SARL)",
+      name: "Certificat de travail - Le Coulant Baraqué",
       file: "documents/certificat_travail_fondu.pdf",
       status: "disponible",
-      description: "Certificat de travail pour mon poste de plongeur au bord du lac à Tresserve."
+      description: "Certificat de travail pour mon poste de plongeur."
     },
     {
       id: "diplome_bac",
       name: "Attestation de réussite - Baccalauréat",
       file: "documents/BACCALAUREAT GENERAL_240226_204710.pdf",
       status: "disponible",
-      description: "Diplôme du Baccalauréat Général, série Scientifique (Mention Assez Bien)."
+      description: "Diplôme du Baccalauréat Général, série Scientifique."
     }
   ],
-  
+
   // Vos projets informatiques/programmation
   projects: [
     {
@@ -110,46 +110,92 @@ const DATA = {
       link: "https://github.com/paul-mottet/candidature_suisse"
     }
   ],
-  
-  // Galerie de photos pour vos travaux dans le bâtiment
-  // Par défaut, nous utilisons des images professionnelles libres de droits (Unsplash) pour le rendu visuel.
-  // Pour mettre vos propres photos : placez-les dans 'photos/batiment/' et changez l'adresse dans la propriété 'file' (ex: "photos/batiment/ma_photo.jpg")
-  batimentPhotos: [
+
+  // Galerie de photos pour vos travaux dans le bâtiment (regroupés par projet)
+  batimentProjects: [
     {
-      title: "Rénovation d'Appartement (Ardèche)",
-      description: "Rénovation complète : plomberie, électricité, doublage de cloisons et finitions.",
-      category: "Rénovation",
-      file: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+      id: "appartement-annonay",
+      title: "Rénovation d'Appartement (Annonay)",
+      description: "Achat et rénovation complète d'un appartement. Travaux réalisés : démolition, isolation, plaques de plâtre (placo), électricité générale, plomberie, pose de parquet flottant, création complète d'une salle de bain moderne et aménagement d'une cuisine équipée.",
+      category: "Rénovation complète",
+      folder: "photos/batiment/Appart-Annonay",
+      photos: [
+        "photos/batiment/Appart-Annonay/photo1.jpg",
+        "photos/batiment/Appart-Annonay/20230227_125731.jpg",
+        "photos/batiment/Appart-Annonay/20230227_125740.jpg",
+        "photos/batiment/Appart-Annonay/20230227_130107.jpg",
+        "photos/batiment/Appart-Annonay/20230227_173039.jpg",
+        "photos/batiment/Appart-Annonay/20230228_135421.jpg",
+        "photos/batiment/Appart-Annonay/20230310_093251.jpg",
+        "photos/batiment/Appart-Annonay/20240516_105843.jpg",
+        "photos/batiment/Appart-Annonay/20240516_105858.jpg",
+        "photos/batiment/Appart-Annonay/20250805_172428.jpg"
+      ]
     },
     {
-      title: "Charpente Traditionnelle",
-      description: "Travaux de structure bois et assemblage de charpente de toiture.",
-      category: "Charpente",
-      file: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+      id: "construction-dependance",
+      title: "Construction d'une Dépendance",
+      description: "Dépendance habitable de 20m² entièrement construite en autonomie : terrassement manuel, coulage des fondations et de la dalle en béton armé, élévation des murs en parpaings, conception et pose d'une charpente bois traditionnelle, réalisation de la couverture de toiture et câblage de l'installation électrique.",
+      category: "Gros œuvre & Second œuvre",
+      folder: "photos/batiment/construction-dependance",
+      photos: [
+        "photos/batiment/construction-dependance/photooo1.jpg",
+        "photos/batiment/construction-dependance/20230417_115145.jpg",
+        "photos/batiment/construction-dependance/20230603_193448.jpg",
+        "photos/batiment/construction-dependance/20231207_094218.jpg",
+        "photos/batiment/construction-dependance/20240210_143042.jpg",
+        "photos/batiment/construction-dependance/20240418_104243.jpg",
+        "photos/batiment/construction-dependance/20240418_153136.jpg"
+      ]
     },
     {
-      title: "Pose de Parquet & Menuiserie",
-      description: "Pose de revêtement de sol et ajustements des ouvertures bois.",
-      category: "Menuiserie",
-      file: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+      id: "renovation-grange",
+      title: "Rénovation d'une Grange (Atelier)",
+      description: "Rénovation lourde d'une ancienne grange en pierre brute pour la transformer en atelier. Travaux réalisés : restauration et rejointoiement des murs de pierre traditionnelle, maçonnerie, dépose complète de l'ancienne toiture dégradée, pose de la nouvelle charpente bois et couverture.",
+      category: "Rénovation & Charpente",
+      folder: "photos/batiment/renovation-grange",
+      photos: [
+        "photos/batiment/renovation-grange/photooooo1.jpg",
+        "photos/batiment/renovation-grange/20220726_151937.jpg",
+        "photos/batiment/renovation-grange/20220920_121245.jpg",
+        "photos/batiment/renovation-grange/20221031_145742.jpg",
+        "photos/batiment/renovation-grange/20221031_145758.jpg",
+        "photos/batiment/renovation-grange/20231003_121513.jpg",
+        "photos/batiment/renovation-grange/20231003_122103.jpg",
+        "photos/batiment/renovation-grange/20231003_122240.jpg"
+      ]
     },
     {
-      title: "Rénovation de Salle de Bain",
-      description: "Pose de faïence murale et raccordements de plomberie sanitaire.",
-      category: "Carrelage & Plomberie",
-      file: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80"
+      id: "tiny-house",
+      title: "Construction de Tiny House",
+      description: "Construction d'une Tiny House de 12 m² avec mezzanine à partir de matériaux de récupération. Conception et montage de la structure en ossature bois, pose de l'isolation, du bardage extérieur en bois, aménagement intérieur optimisé et câblage électrique.",
+      category: "Ossature Bois",
+      folder: "photos/batiment/tiny-house",
+      photos: [
+        "photos/batiment/tiny-house/photooooo1.jpg",
+        "photos/batiment/tiny-house/20260407_181058.jpg",
+        "photos/batiment/tiny-house/20260410_123634.jpg"
+      ]
     },
     {
-      title: "Isolation et Plaquage",
-      description: "Mise en place de l'isolation thermique et montage des rails de plaque de plâtre.",
-      category: "Isolation",
-      file: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      title: "Finitions & Peinture",
-      description: "Préparation des supports, ponçage et mise en peinture des murs.",
-      category: "Finitions",
-      file: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
+      id: "autres-travaux",
+      title: "Autres chantiers & interventions",
+      description: "Divers travaux manuels complémentaires réalisés à mon compte ou dans le cadre de sous-traitances : ragréage et pose de carrelage au sol, travaux de petite maçonnerie, montage et ajustement de menuiseries intérieures/extérieures et finitions diverses.",
+      category: "Polyvalent & Finitions",
+      folder: "photos/batiment/autres",
+      photos: [
+        "photos/batiment/autres/photoo1.jpg",
+        "photos/batiment/autres/20210823_163645.jpg",
+        "photos/batiment/autres/20210825_152518.jpg",
+        "photos/batiment/autres/20210826_082801.jpg",
+        "photos/batiment/autres/20210826_082809.jpg",
+        "photos/batiment/autres/20210826_082819.jpg",
+        "photos/batiment/autres/20220922_134236.jpg",
+        "photos/batiment/autres/20221005_141932.jpg",
+        "photos/batiment/autres/20221005_141942.jpg",
+        "photos/batiment/autres/20221020_174925.jpg",
+        "photos/batiment/autres/20221101_155731.jpg"
+      ]
     }
   ]
 };

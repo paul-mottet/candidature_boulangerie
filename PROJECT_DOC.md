@@ -58,16 +58,23 @@ profile: {
 ```
 Le site affichera automatiquement le bouton **"Consulter le document"** avec un badge vert au lieu du message d'attente.
 
-### 3. Ajouter des Photos de vos Chantiers (Bâtiment)
-Le site gère un nombre illimité de photos. 
-1. Placez votre photo (par exemple `travail_peinture.jpg`) dans le dossier `photos/batiment/`.
-2. Ajoutez une ligne dans le tableau `batimentPhotos` dans `data.js` :
+### 3. Ajouter des Photos ou des Projets de vos Chantiers (Bâtiment)
+Le site organise vos réalisations sous forme de **projets** pour éviter de surcharger la page.
+1. Créez un dossier pour votre projet dans `photos/batiment/` (ex: `photos/batiment/peinture/`).
+2. Déposez-y vos photos. Nommez la photo principale (de couverture) `photo1.jpg` (ou similaire).
+3. Ouvrez `data.js` et modifiez ou ajoutez une entrée dans le tableau `batimentProjects` :
 ```javascript
 {
+  id: "peinture-finitions",
   title: "Peinture et Enduits",
-  description: "Préparation des plaques de plâtre et application de peinture mate.",
+  description: "Préparation des supports en plaques de plâtre et application de peinture mate.",
   category: "Finitions",
-  file: "photos/batiment/travail_peinture.jpg"
+  folder: "photos/batiment/peinture",
+  photos: [
+    "photos/batiment/peinture/photo1.jpg",
+    "photos/batiment/peinture/etape_enduit.jpg",
+    "photos/batiment/peinture/rendu_final.jpg"
+  ]
 }
 ```
 
@@ -85,11 +92,11 @@ Le site gère un nombre illimité de photos.
    Création d'une page A4 autonome qui n'est pas liée sur la navigation du site. Elle intègre un script qui génère un QR code à la volée vers l'URL du site en utilisant l'API `qrserver.com`. 
    Grâce aux règles CSS `@media print` dans `style.css`, l'utilisateur n'a qu'à cliquer sur "Imprimer en A4" ou faire `Ctrl+P` dans son navigateur : les boutons disparaissent, les marges de la page A4 sont parfaitement centrées et la devanture s'imprime dans une qualité premium.
 
-4. **Lightbox d'images Native et Légère** :
-   Au lieu d'importer une bibliothèque lourde, un système de Lightbox a été implémenté en JavaScript natif (20 lignes de code) pour permettre l'agrandissement plein écran des photos de travaux manuels avec gestion de la touche Échap et des clics extérieurs pour la fermeture.
+4. **Carrousel & Lightbox par Projet sans Dépendances** :
+   Pour gérer proprement les dizaines de photos fournies tout en gardant une interface épurée, les images sont regroupées par projet réel. La Lightbox native en Vanilla JS a été étendue pour intégrer une navigation par carrousel (boutons graphiques stylisés avec effet de flou et support des flèches Gauche/Droite du clavier) permettant de faire défiler toutes les photos du projet choisi de manière fluide.
 
-5. **Photos de Remplacement Haut de Gamme** :
-   En attendant les vraies photos de Paul Mottet, nous avons injecté des URL Unsplash thématiques (charpente, maçonnerie, rénovation) libres de droits pour offrir une démo visuelle parfaite et professionnelle au premier démarrage.
+5. **Passage aux Vraies Réalisations Locales** :
+   Remplacement complet des images de démonstration Unsplash par les vraies photos locales de Paul Mottet classées par dossiers (Appartement Annonay, Dépendance, Rénovation de Grange, Tiny House, etc.) pour un portfolio 100% authentique.
 
 6. **Positionnement Dynamique des Blocs de la Devanture A4** :
    Le bloc contenant le QR Code, la phrase d'explication et l'adresse URL a été sorti du conteneur central `.cover-body` pour devenir un descendant direct de `.cover-sheet`. Grâce au `display: flex` et `justify-content: space-between` appliqué au format A4, le titre et le sommaire se recentrent agréablement au milieu de la page tandis que le QR Code s'aligne automatiquement au pied du document physique.
@@ -97,6 +104,6 @@ Le site gère un nombre illimité de photos.
 ---
 
 ## 📈 Tâches pour les Prochains Agents
-- [ ] Remplacer les URL d'images Unsplash dans `data.js` par les chemins locaux des vraies photos de chantiers fournies par Paul.
+- [x] Remplacer les URL d'images Unsplash dans `data.js` par les chemins locaux des vraies photos de chantiers fournies par Paul.
 - [x] Une fois que Paul aura téléversé sa lettre de recommandation et ses certificats de travail physiques, mettre à jour leur `status: "disponible"` dans `data.js`.
 - [ ] Aider Paul à configurer son Git et à déployer le site sur GitHub Pages (branche `main` ou `gh-pages` pointant vers le dépôt `paul-mottet/candidature_suisse`).

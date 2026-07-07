@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paul MOTTET - Candidature Boulangerie & Portfolio</title>
-  <meta name="description" content="Dossier de candidature en ligne de Paul MOTTET - Vendeur en Boulangerie / Employé Polyvalent. Accédez à mon CV, mes certificats de travail et mes réalisations.">
-  
+  <meta name="description"
+    content="Dossier de candidature en ligne de Paul MOTTET - Vendeur en Boulangerie / Employé Polyvalent. Accédez à mon CV, mes certificats de travail et mes réalisations.">
+
   <!-- Favicon alternative -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- Statistiques de visite (GoatCounter - Sans cookies / RGPD) -->
   <script data-goatcounter="https://paul-mottet.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
+
 <body>
 
   <!-- Hero Section / Header -->
@@ -24,7 +28,7 @@
       <p class="profile-bio" id="profile-bio">
         <!-- Rempli par JavaScript -->
       </p>
-      
+
       <!-- Barre de contact -->
       <div class="contact-bar" id="contact-bar">
         <!-- Rempli par JavaScript -->
@@ -35,30 +39,36 @@
   <!-- Section CV & Documents complémentaires -->
   <section class="container" id="documents-section">
     <h2 class="section-title">Dossier de Candidature</h2>
-    
+
     <div class="cv-documents-grid">
       <!-- Partie gauche : Visionneuse de CV -->
       <div class="cv-viewer-container">
         <div class="cv-viewer-header">
           <h3 id="cv-title">Mon CV</h3>
           <a id="cv-download-btn" href="" class="btn" download>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
             Télécharger le PDF
           </a>
         </div>
-        
+
         <!-- Iframe de visualisation pour grand écran -->
         <div class="cv-frame-wrapper" id="cv-frame-wrapper">
           <!-- Rempli par JavaScript -->
         </div>
-        
+
         <!-- Fallback mobile -->
         <div class="cv-fallback-mobile" id="cv-fallback-mobile">
-          <p style="margin-bottom: 20px; color: var(--text-muted);">Visualisation indisponible sur cet appareil. Vous pouvez consulter ou télécharger le fichier directement :</p>
+          <p style="margin-bottom: 20px; color: var(--text-muted);">Visualisation indisponible sur cet appareil. Vous
+            pouvez consulter ou télécharger le fichier directement :</p>
           <a id="cv-fallback-btn" href="" class="btn" target="_blank">Ouvrir le CV (PDF)</a>
         </div>
       </div>
-      
+
       <!-- Partie droite : Certificats & Lettres -->
       <div>
         <h3 style="margin-bottom: 20px; color: var(--accent-dark);">Pièces Justificatives</h3>
@@ -71,7 +81,11 @@
     <!-- Bouton pour dérouler les projets personnels -->
     <div style="text-align: center; margin-top: 50px;" id="personal-projects-trigger-container">
       <button id="show-personal-projects-btn" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          style="vertical-align: middle; margin-right: 8px;">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
         Dérouler mes projets personnels (Bâtiment & Programmation)
       </button>
     </div>
@@ -83,7 +97,9 @@
     <section class="container" id="batiment-section">
       <h2 class="section-title">Réalisations & Travaux Manuels</h2>
       <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
-        Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie, rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à travailler physiquement.
+        Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie,
+        rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à
+        travailler physiquement.
       </p>
       <div class="gallery-grid" id="gallery-grid">
         <!-- Rempli par JavaScript -->
@@ -94,7 +110,8 @@
     <section class="container" id="programming-section">
       <h2 class="section-title">Projets de Programmation</h2>
       <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 700px;">
-        Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles.
+        Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des
+        données littéraires ou créer des applications mobiles.
       </p>
       <div class="projects-grid" id="projects-grid">
         <!-- Rempli par JavaScript -->
@@ -105,16 +122,24 @@
   <!-- Lightbox Modal (Photos de travaux) -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightbox-close" aria-label="Fermer la galerie">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Photo précédente">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
     <img class="lightbox-content" id="lightbox-img" src="" alt="Agrandissement de réalisation">
+    <button class="lightbox-next" id="lightbox-next" aria-label="Photo suivante">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
     <div class="lightbox-caption" id="lightbox-caption">
       <h4 id="lightbox-title"></h4>
       <p id="lightbox-desc"></p>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
     </div>
   </div>
 
   <!-- Modal Notification / Accès Restreint / Copie lien -->
   <div class="lightbox" id="alert-modal">
-    <div style="background-color: var(--bg-secondary); padding: 30px; border-radius: var(--border-radius); max-width: 450px; width: 90%; color: var(--text-main); text-align: center; box-shadow: var(--hover-shadow); display: flex; flex-direction: column; align-items: center; gap: 20px;">
+    <div
+      style="background-color: var(--bg-secondary); padding: 30px; border-radius: var(--border-radius); max-width: 450px; width: 90%; color: var(--text-main); text-align: center; box-shadow: var(--hover-shadow); display: flex; flex-direction: column; align-items: center; gap: 20px;">
       <h4 id="alert-title" style="color: var(--accent-dark); font-size: 1.3rem;">Accès Restreint</h4>
       <p id="alert-message" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5;"></p>
       <button id="alert-close" class="btn" style="padding: 10px 24px;">Fermer</button>
@@ -130,7 +155,7 @@
 
   <!-- Chargement des Données -->
   <script src="data.js"></script>
-  
+
   <!-- Logique de rendu dynamique & Lightbox -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -139,7 +164,7 @@
       document.getElementById('profile-name').innerText = DATA.profile.name;
       document.getElementById('profile-title').innerText = DATA.profile.title;
       document.getElementById('profile-bio').innerText = DATA.profile.bio;
-      document.getElementById('footer-text').innerHTML = `&copy; 2026 ${DATA.profile.name}. Dossier de candidature de Vendeur en Boulangerie / Employé Polyvalent.`;
+      document.getElementById('footer-text').innerHTML = `&copy; 2026 ${DATA.profile.name}. Dossier de candidature Vendeur en Boulangerie / Employé Polyvalent.`;
 
       // Remplissage de la barre de contact
       const contactBar = document.getElementById('contact-bar');
@@ -191,11 +216,11 @@
       const cvDoc = DATA.documents.find(doc => doc.id === 'cv');
       if (cvDoc && cvDoc.status === 'disponible') {
         const cvPath = cvDoc.file;
-        
+
         // Configurer les boutons de téléchargement et d'affichage direct
         document.getElementById('cv-download-btn').href = cvPath;
         document.getElementById('cv-fallback-btn').href = cvPath;
-        
+
         // Injecter l'iframe
         const frameWrapper = document.getElementById('cv-frame-wrapper');
         frameWrapper.innerHTML = `<iframe src="${cvPath}#toolbar=0" title="CV ${DATA.profile.name}"></iframe>`;
@@ -213,16 +238,16 @@
       // 3. Chargement de la liste des documents complémentaires
       const documentsList = document.getElementById('documents-list');
       documentsList.innerHTML = '';
-      
+
       // On exclut le CV principal de cette liste car il est déjà affiché en grand
       const complementDocs = DATA.documents.filter(doc => doc.id !== 'cv');
-      
+
       complementDocs.forEach(doc => {
         const isAvail = doc.status === 'disponible';
-        
+
         const card = document.createElement('div');
         card.className = `document-card ${!isAvail ? 'pending' : ''}`;
-        
+
         let actionButtonHTML = '';
         if (isAvail) {
           actionButtonHTML = `
@@ -237,7 +262,7 @@
               Sera téléversé sous peu
             </span>`;
         }
-        
+
         card.innerHTML = `
           <div class="document-card-header">
             <span class="document-title">${doc.name}</span>
@@ -251,42 +276,52 @@
         documentsList.appendChild(card);
       });
 
-      // 4. Chargement de la galerie de photos bâtiment
+      // 4. Chargement de la galerie de photos bâtiment par projets
       const galleryGrid = document.getElementById('gallery-grid');
       galleryGrid.innerHTML = '';
-      
-      DATA.batimentPhotos.forEach(photo => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        // Stockage des attributs pour la lightbox
-        item.dataset.src = photo.file;
-        item.dataset.title = photo.title;
-        item.dataset.desc = photo.description;
-        
-        item.innerHTML = `
+
+      DATA.batimentProjects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'gallery-item';
+        card.dataset.projectId = project.id;
+
+        const coverPhoto = project.photos[0];
+        const photoCount = project.photos.length;
+
+        card.innerHTML = `
           <div class="gallery-img-container">
-            <img src="${photo.file}" alt="${photo.title}">
+            <span class="gallery-category-badge">${project.category}</span>
+            <span class="gallery-count-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 2px;"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              ${photoCount} photo${photoCount > 1 ? 's' : ''}
+            </span>
+            <img src="${coverPhoto}" alt="${project.title}">
           </div>
           <div class="gallery-info">
-            <div class="gallery-category">${photo.category}</div>
-            <h3 class="gallery-title">${photo.title}</h3>
-            <p class="gallery-desc">${photo.description}</p>
+            <div class="gallery-info-text">
+              <h3 class="gallery-title">${project.title}</h3>
+              <p class="gallery-desc">${project.description}</p>
+            </div>
+            <span class="gallery-link">
+              Découvrir le projet
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
           </div>
         `;
-        galleryGrid.appendChild(item);
+        galleryGrid.appendChild(card);
       });
 
       // 5. Chargement des projets de programmation
       const projectsGrid = document.getElementById('projects-grid');
       projectsGrid.innerHTML = '';
-      
+
       DATA.projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
-        
+
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         const isAuth = project.requiresAuth === true;
-        
+
         card.innerHTML = `
           <div class="project-card-top">
             <h3>${project.title}</h3>
@@ -298,7 +333,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         `;
-        
+
         // Clic sur QCM restrictif
         if (isAuth) {
           card.querySelector('.restricted-link').addEventListener('click', (e) => {
@@ -309,25 +344,76 @@
             );
           });
         }
-        
+
         projectsGrid.appendChild(card);
       });
 
-      // 6. Logique de la Lightbox
+      // 6. Logique de la Lightbox avec Carrousel par Projet
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
       const lightboxTitle = document.getElementById('lightbox-title');
       const lightboxDesc = document.getElementById('lightbox-desc');
       const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+      const lightboxCounter = document.getElementById('lightbox-counter');
 
-      // Ouvrir la lightbox
+      let currentProject = null;
+      let currentPhotoIndex = 0;
+
+      function updateLightboxPhoto() {
+        if (!currentProject) return;
+        const photoUrl = currentProject.photos[currentPhotoIndex];
+        lightboxImg.src = photoUrl;
+        lightboxCounter.innerText = `Image ${currentPhotoIndex + 1} sur ${currentProject.photos.length}`;
+        
+        if (currentProject.photos.length <= 1) {
+          lightboxPrev.style.display = 'none';
+          lightboxNext.style.display = 'none';
+          lightboxCounter.style.display = 'none';
+        } else {
+          lightboxPrev.style.display = 'flex';
+          lightboxNext.style.display = 'flex';
+          lightboxCounter.style.display = 'inline-block';
+        }
+      }
+
+      function showNextPhoto() {
+        if (!currentProject) return;
+        currentPhotoIndex = (currentPhotoIndex + 1) % currentProject.photos.length;
+        updateLightboxPhoto();
+      }
+
+      function showPrevPhoto() {
+        if (!currentProject) return;
+        currentPhotoIndex = (currentPhotoIndex - 1 + currentProject.photos.length) % currentProject.photos.length;
+        updateLightboxPhoto();
+      }
+
+      // Ouvrir la lightbox pour un projet
       document.querySelectorAll('.gallery-item').forEach(item => {
         item.addEventListener('click', () => {
-          lightboxImg.src = item.dataset.src;
-          lightboxTitle.innerText = item.dataset.title;
-          lightboxDesc.innerText = item.dataset.desc;
-          lightbox.classList.add('active');
+          const projectId = item.dataset.projectId;
+          currentProject = DATA.batimentProjects.find(p => p.id === projectId);
+          if (currentProject) {
+            currentPhotoIndex = 0;
+            lightboxTitle.innerText = currentProject.title;
+            lightboxDesc.innerText = currentProject.description;
+            updateLightboxPhoto();
+            lightbox.classList.add('active');
+          }
         });
+      });
+
+      // Navigation clics
+      lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPrevPhoto();
+      });
+
+      lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNextPhoto();
       });
 
       // Fermer la lightbox (bouton close)
@@ -342,10 +428,16 @@
         }
       });
 
-      // Fermer la lightbox avec la touche Échap (Escape)
+      // Clavier : Navigation et Fermeture
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
           lightbox.classList.remove('active');
+        } else if (e.key === 'ArrowRight') {
+          showNextPhoto();
+        } else if (e.key === 'ArrowLeft') {
+          showPrevPhoto();
         }
       });
 
@@ -394,4 +486,5 @@
     });
   </script>
 </body>
+
 </html>
