@@ -90,7 +90,7 @@ const DATA = {
       title: "Lexica Android",
       description: "Codé avec Copilot. Application Android native de gestion de vocabulaire et d'extraits littéraires. Inclut des scripts d'analyse de données en Python.",
       tags: ["Kotlin", "Android SDK", "Python"],
-      link: "https://github.com/paul-mottet/LexicaAndroid2"
+      link: "https://github.com/paul-mottet/LexicaAndroidPublic"
     },
     {
       title: "Pipeline de traitement OCR",
