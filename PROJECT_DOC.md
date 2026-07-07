@@ -1,4 +1,4 @@
-# Documentation du Projet - candidature_suisse
+# Documentation du Projet - candidature_boulangerie
 
 Ce projet est conçu pour soutenir la candidature de Paul MOTTET en Suisse pour des postes de **Vendeur en Boulangerie / Employé Polyvalent**. Il combine un dossier physique avec une vitrine numérique accessible par QR Code (hébergée sur GitHub Pages).
 
@@ -7,7 +7,7 @@ Ce projet est conçu pour soutenir la candidature de Paul MOTTET en Suisse pour 
 ## 🏗️ Structure des Fichiers
 
 ```text
-candidature_suisse/
+candidature_boulangerie/
 ├── index.html                 # Page web principale (vitrine / portfolio)
 ├── cover.html                 # Devanture du dossier de candidature (A4 imprimable)
 ├── style.css                  # Styles CSS unifiés (Charte graphique & Impression)
@@ -35,7 +35,7 @@ profile: {
   email: "mottet2.paul6@outlook.fr",
   address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
   github: "https://github.com/r0xef",
-  websiteUrl: "https://paul-mottet.github.io/candidature_suisse/",
+  websiteUrl: "https://paul-mottet.github.io/candidature_boulangerie/",
   bio: "...", // Votre biographie d'en-tête
   batimentBio: "...", // Description de la section Bâtiment
   programmingBio: "..." // Description de la section Informatique
@@ -108,4 +108,4 @@ Le site organise vos réalisations sous forme de **projets** pour éviter de sur
 ## 📈 Tâches pour les Prochains Agents
 - [x] Remplacer les URL d'images Unsplash dans `data.js` par les chemins locaux des vraies photos de chantiers fournies par Paul.
 - [x] Une fois que Paul aura téléversé sa lettre de recommandation et ses certificats de travail physiques, mettre à jour leur `status: "disponible"` dans `data.js`.
-- [ ] Aider Paul à configurer son Git et à déployer le site sur GitHub Pages (branche `main` ou `gh-pages` pointant vers le dépôt `paul-mottet/candidature_suisse`).
+- [ ] Aider Paul à configurer son Git et à déployer le site sur GitHub Pages (branche `main` ou `gh-pages` pointant vers le dépôt `paul-mottet/candidature_boulangerie`).
