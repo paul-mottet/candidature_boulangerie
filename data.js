@@ -171,7 +171,7 @@ const DATA = {
       id: "tiny-house",
       title: "Construction de Tiny House",
       description: "Construction d'une Tiny House de 12 m² avec mezzanine à partir de matériaux de récupération. Conception et montage de la structure en acier soudé, charpente bois, aménagement et réseaux.",
-      category: "Ossature Bois",
+      category: "La Tiny",
       folder: "photos/batiment/tiny-house",
       photos: [
         "photos/batiment/tiny-house/photooooo1.jpg",

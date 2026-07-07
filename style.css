@@ -936,11 +936,6 @@ footer p {
     height: 480px;
   }
 
-  .cv-fallback-mobile {
-    display: block;
-    padding: 20px 0 0 0;
-  }
-
   .cover-sheet {
     width: 95%;
     height: auto;
