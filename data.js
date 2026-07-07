@@ -11,7 +11,7 @@ const DATA = {
     github: "https://github.com/r0xef", // Votre GitHub principal
     websiteUrl: "https://paul-mottet.github.io/candidature_suisse/", // URL GitHub Pages
     bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement.",
-    batimentBio: "Au-delà de la vente et de la restauration, j'ai réalisé de nombreux travaux pratiques (charpente, menuiserie, rénovation complète d'appartement). Ces expériences témoignent de ma rigueur manuelle et de ma capacité à travailler physiquement.",
+    batimentBio: "Au-delà de la vente et de la restauration, j'ai également de l'expérience dans les métiers du bâtiment. J'y ai travaillé un peu comme salarié, mais surtout comme sous-traitant (pour des entreprises comme Carrelage Mallisard, SARL Melconfort, Alena, Mobilier Singulier...) puis comme indépendant. Cela m'a permis d'acquérir un savoir-faire dans différents corps de métier et de réaliser des projets personnels, comme l'acquisition et la rénovation d'un appartement en Ardèche. Ces expériences témoignent de ma rigueur, de mon habileté manuelle et de ma capacité à travailler physiquement.",
     programmingBio: "Autodidacte en informatique et programmation, j'aime développer des outils pour structurer et analyser des données littéraires ou créer des applications mobiles."
   },
 
@@ -90,13 +90,13 @@ const DATA = {
       title: "Lexica Android",
       description: "Codé avec Copilot. Application Android native de gestion de vocabulaire et d'extraits littéraires. Inclut des scripts d'analyse de données en Python.",
       tags: ["Kotlin", "Android SDK", "Python"],
-      link: "https://github.com/r0xef/LexicaAndroid2"
+      link: "https://github.com/paul-mottet/LexicaAndroid2"
     },
     {
       title: "Pipeline de traitement OCR",
       description: "Codé avec Copilot. Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
       tags: ["Python", "JSON", "Data Extraction"],
-      link: "https://github.com/r0xef/LexicaAndroid2/tree/master/mots_et_extraits"
+      link: "https://github.com/paul-mottet/LexicaAndroid2/tree/master/mots_et_extraits"
     },
     {
       title: "Site web révision et QCM",
@@ -118,7 +118,7 @@ const DATA = {
     {
       id: "appartement-annonay",
       title: "Rénovation d'Appartement (Annonay)",
-      description: "Achat et rénovation complète d'un appartement. Travaux réalisés : démolition, isolation, plaques de plâtre (placo), électricité générale, plomberie, pose de parquet flottant, création complète d'une salle de bain moderne et aménagement d'une cuisine équipée.",
+      description: "Achat et rénovation complète d'un appartement. Travaux réalisés : démolition, isolation, plaques de plâtre (placo), électricité générale, plomberie, réstauration du plancher, création d'une salle de bain.",
       category: "Rénovation complète",
       folder: "photos/batiment/Appart-Annonay",
       photos: [
@@ -136,7 +136,7 @@ const DATA = {
     {
       id: "construction-dependance",
       title: "Construction d'une Dépendance",
-      description: "Dépendance habitable de 20m² entièrement construite en autonomie : terrassement manuel, coulage des fondations et de la dalle en béton armé, élévation des murs en parpaings, conception et pose d'une charpente bois traditionnelle, réalisation de la couverture de toiture et câblage de l'installation électrique.",
+      description: "Dépendance habitable de 20m² : terrassement, coulage des fondations et de la valide en béton armé, élévation des murs en parpaings, conception et pose d'une charpente bois traditionnelle, réalisation de la couverture de toiture et câblage de l'installation électrique. C'est le plus gros chantier que j'ai réalisé à mon compte.",
       category: "Gros œuvre & Second œuvre",
       folder: "photos/batiment/construction-dependance",
       photos: [
@@ -152,7 +152,7 @@ const DATA = {
     {
       id: "renovation-grange",
       title: "Rénovation d'une Grange (Atelier)",
-      description: "Rénovation lourde d'une ancienne grange en pierre brute pour la transformer en atelier. Travaux réalisés : restauration et rejointoiement des murs de pierre traditionnelle, maçonnerie, dépose complète de l'ancienne toiture dégradée, pose de la nouvelle charpente bois et couverture.",
+      description: "Rénovation lourde d'une ancienne grange en pierre brute pour la transformer en atelier. Travaux réalisés : restauration et rejointoiement des murs de pierre traditionnelle, maçonnerie, pose des linteaux et coulages des arase,dépose complète de l'ancienne toiture dégradée, pose de la nouvelle charpente bois et couverture.",
       category: "Rénovation & Charpente",
       folder: "photos/batiment/renovation-grange",
       photos: [
@@ -169,19 +169,20 @@ const DATA = {
     {
       id: "tiny-house",
       title: "Construction de Tiny House",
-      description: "Construction d'une Tiny House de 12 m² avec mezzanine à partir de matériaux de récupération. Conception et montage de la structure en ossature bois, pose de l'isolation, du bardage extérieur en bois, aménagement intérieur optimisé et câblage électrique.",
+      description: "Construction d'une Tiny House de 12 m² avec mezzanine à partir de matériaux de récupération. Conception et montage de la structure en acier soudé, charpente bois, aménagement et réseaux.",
       category: "Ossature Bois",
       folder: "photos/batiment/tiny-house",
       photos: [
         "photos/batiment/tiny-house/photooooo1.jpg",
         "photos/batiment/tiny-house/20260407_181058.jpg",
-        "photos/batiment/tiny-house/20260410_123634.jpg"
+        "photos/batiment/tiny-house/20260410_123634.jpg",
+        "photos/batiment/tiny-house/20260707_135403.jpg"
       ]
     },
     {
       id: "autres-travaux",
       title: "Autres chantiers & interventions",
-      description: "Divers travaux manuels complémentaires réalisés à mon compte ou dans le cadre de sous-traitances : ragréage et pose de carrelage au sol, travaux de petite maçonnerie, montage et ajustement de menuiseries intérieures/extérieures et finitions diverses.",
+      description: "quelque uns des autres chantier auxquels j'ai pu participer à mon compte ou dans le cadre de sous-traitances : ragréage et pose de carrelage au sol, travaux maçonnerie, réalisation et pose de plateau en bois pour restaurant, et finitions diverses.",
       category: "Polyvalent & Finitions",
       folder: "photos/batiment/autres",
       photos: [
