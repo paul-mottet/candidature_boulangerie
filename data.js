@@ -88,26 +88,26 @@ const DATA = {
   projects: [
     {
       title: "Lexica Android",
-      description: "Codé avec Copilot. Application Android native de gestion de vocabulaire et d'extraits littéraires. Inclut des scripts d'analyse de données en Python.",
+      description: "Codé avec Copilot. Application Android native de gestion de vocabulaire et d'extraits littéraires. Bientôt disponible sur le play store.",
       tags: ["Kotlin", "Android SDK", "Python"],
       link: "https://github.com/paul-mottet/LexicaAndroidPublic"
     },
     {
       title: "Pipeline de traitement OCR",
-      description: "Codé avec Copilot. Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
+      description: "Codé sur Antigravity IDE. Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
       tags: ["Python", "JSON", "Data Extraction"],
       link: "https://github.com/paul-mottet/StructuresPipelinesExtraits"
     },
     {
-      title: "Site web révision et QCM",
-      description: "Codé avec Copilot. Plateforme web interactive d'entraînement aux examens et questionnaires à choix multiples.",
+      title: "Site web révision et QCM universitaires",
+      description: "Codé avec Copilot. Plateforme web interactive d'entraînement aux examens et questionnaires à choix multiples pour étudiants universitaires.",
       tags: ["JavaScript", "HTML5", "CSS3"],
       link: "#",
       requiresAuth: true
     },
     {
       title: "Site de Candidature & Dossier Numérique",
-      description: "Codé avec Copilot. Conception de ce site web de présentation de profil et de la devanture de dossier A4 avec QR Code dynamique.",
+      description: "Codé avec Copilot. Conception de ce site web de présentation.",
       tags: ["HTML5", "CSS3", "JavaScript"],
       link: "https://github.com/paul-mottet/candidature_suisse"
     }
