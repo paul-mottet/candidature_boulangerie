@@ -96,7 +96,7 @@ const DATA = {
       title: "Pipeline de traitement OCR",
       description: "Codé avec Copilot. Scripts Python automatisés pour le traitement, le nettoyage et le comptage d'extraits issus de scans OCR de livres.",
       tags: ["Python", "JSON", "Data Extraction"],
-      link: "https://github.com/paul-mottet/LexicaAndroid2/tree/master/mots_et_extraits"
+      link: "https://github.com/paul-mottet/StructuresPipelinesExtraits"
     },
     {
       title: "Site web révision et QCM",
