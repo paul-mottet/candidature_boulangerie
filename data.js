@@ -4,7 +4,7 @@
 const DATA = {
   profile: {
     name: "Paul MOTTET",
-    title: "Vendeur en Boulangerie / Employé Polyvalent",
+    title: "Vendeur / Employé Polyvalent",
     phone: "+33 7 74 52 49 10",
     email: "mottet2.paul6@outlook.fr",
     address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
