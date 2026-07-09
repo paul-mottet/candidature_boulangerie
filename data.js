@@ -10,9 +10,9 @@ const DATA = {
     address: "9 Rue Choiseul, 01210 Ferney-Voltaire",
     github: "https://github.com/r0xef", // Votre GitHub principal
     websiteUrl: "https://paul-mottet.github.io/candidature_boulangerie/", // URL GitHub Pages
-    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement, pour des horaires en journée comme matinaux. Je cherche une entreprise dans laquelle m'investir à moyen / long terme.",
-    batimentBio: "Au-delà de la vente et de la restauration, j'ai également de l'expérience dans les métiers du bâtiment. J'y ai travaillé un peu comme salarié, mais surtout comme sous-traitant (pour des entreprises comme Carrelage Mallisard, SARL Melconfort, Alena, Mobilier Singulier...) puis comme indépendant. Cela m'a permis d'acquérir un savoir-faire dans différents corps de métiers et de réaliser des projets personnels, comme l'acquisition et la rénovation d'un appartement en Ardèche. Ces expériences témoignent de ma rigueur, de mon habileté manuelle et de ma capacité à travailler physiquement.",
-    programmingBio: "J'ai découvert il y a peu de temps que tout le monde pouvait, aujourd'hui, développer des outils numériques grâce aux moyens fournis par l'IA, sans avoir besoin d'énormément de connaissances préalables en informatique. C'est devenu l'un de mes passe-temps entre mes différents contrats de travail. Je pourrais ainsi vous venir en aide au besoin pour la gestion de votre site web ou en cas de problème informatique."
+    bio: "Professionnel dynamique et polyvalent, avec une expérience confirmée en vente en boulangerie et en restauration. Passionné par le contact client, habitué au rythme soutenu des coups de feu et rigoureux sur les normes HACCP. Vivant à Ferney-Voltaire, je suis disponible immédiatement, pour des horaires en journée comme matinaux. Je cherche une entreprise dans laquelle m'investir à moyen ou long terme.",
+    batimentBio: "Au-delà de la vente et de la restauration, j'ai également de l'expérience dans les métiers du bâtiment. J'y ai travaillé un peu comme salarié (Testu EIRL), mais surtout comme sous-traitant (pour des entreprises comme Carrelage Mallisard, SARL Melconfort, Alena, Mobilier Singulier... Je peux fournir les factures si besoin) puis comme indépendant. Cela m'a permis d'acquérir un savoir-faire dans différents corps de métiers et de réaliser des projets personnels, comme l'acquisition et la rénovation d'un appartement en Ardèche. Ces expériences témoignent de ma rigueur, de mon habileté manuelle et de ma capacité à travailler physiquement.",
+    programmingBio: "J'ai découvert il y a peu de temps que tout le monde pouvait, aujourd'hui, développer des outils numériques grâce aux moyens fournis par l'IA, sans avoir besoin d'énormément de connaissances préalables en informatique. C'est devenu l'un de mes passe-temps, et comme vous-pouvez le voir avec le présent site web le résutats est positif. Je pourrais ainsi vous venir en aide au besoin pour la gestion de votre site web ou en cas de problème informatique."
   },
 
   // Liste des documents officiels (CV, lettres de recommandation, certificats de travail)
@@ -82,6 +82,13 @@ const DATA = {
       file: "documents/BACCALAUREAT GENERAL_240226_204710.pdf",
       status: "disponible",
       description: "Diplôme du Baccalauréat Général, série Scientifique."
+    },
+    {
+      id: "certificat_dpe",
+      name: "Certification Diagnostiqueur DPE",
+      file: "documents/certificat_DPE_energie_mention.pdf",
+      status: "disponible",
+      description: "Certification pour la réalisation de Diagnostics de Performance Énergétique (DPE)."
     }
   ],
 
@@ -153,7 +160,7 @@ const DATA = {
     {
       id: "renovation-grange",
       title: "Rénovation d'une Grange (Atelier)",
-      description: "Rénovation lourde d'une ancienne grange en pierre brute pour la transformer en atelier. Travaux réalisés : restauration et rejointoiement des murs de pierre traditionnelle, maçonnerie, pose des linteaux et coulages des arase,dépose complète de l'ancienne toiture dégradée, pose de la nouvelle charpente bois et couverture.",
+      description: "Rénovation lourde d'une ancienne grange en pierre brute pour la transformer en atelier. Travaux réalisés : restauration et rejointoiement des murs de pierre traditionnelle, maçonnerie, pose des linteaux et coulages des arase,dépose complète de l'ancienne toiture dégradée, pose de la nouvelle charpente bois et couverture. Chantier à mon compte.",
       category: "Rénovation & Charpente",
       folder: "photos/batiment/renovation-grange",
       photos: [

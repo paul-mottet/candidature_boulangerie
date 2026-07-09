@@ -864,6 +864,157 @@ section {
   font-size: 0.95rem;
 }
 
+/* =====================================================
+   LETTRE DE MOTIVATION (letter-page)
+   ===================================================== */
+
+/* Page body pour la lettre */
+.letter-page-body {
+  background-color: #f0ece6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Feuille A4 de la lettre */
+.letter-sheet {
+  background-color: #fff;
+  width: 210mm;
+  min-height: 297mm;
+  box-shadow: 0 4px 60px rgba(74, 62, 61, 0.12);
+  border: 1px solid #e0dcd6;
+  padding: 18mm 22mm 18mm 22mm;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Expéditeur */
+.letter-sender {
+  margin-bottom: 6mm;
+}
+
+.letter-sender-name {
+  font-family: var(--font-title);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.letter-sender-details {
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Date et lieu */
+.letter-date {
+  text-align: right;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 7mm;
+  font-style: italic;
+}
+
+/* Objet */
+.letter-object {
+  font-size: 0.95rem;
+  margin-bottom: 6mm;
+  padding-bottom: 4mm;
+  border-bottom: 2px solid var(--accent-gold);
+  color: var(--text-main);
+}
+
+.letter-object-label {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+/* Salutation */
+.letter-greeting {
+  font-size: 0.95rem;
+  margin-bottom: 5mm;
+  color: var(--text-main);
+}
+
+/* Corps de la lettre */
+.letter-body {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  text-align: justify;
+}
+
+.letter-body p {
+  margin-bottom: 5mm;
+}
+
+.letter-body strong {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+/* Encadré QR Code dans la lettre */
+.letter-qr-callout {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: var(--bg-primary);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 4mm 0 4mm 0;
+}
+
+.letter-qr-callout-text {
+  flex: 1;
+}
+
+.letter-qr-callout-text p {
+  margin-bottom: 2mm;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.letter-qr-url {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--accent-dark);
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+.letter-qr-code-wrapper {
+  flex-shrink: 0;
+}
+
+.letter-qr-img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #e8e4de;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Signature */
+.letter-signature {
+  margin-top: 4mm;
+  text-align: right;
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
 /* Bouton d'impression flottant (visible uniquement à l'écran) */
 .print-actions {
   position: fixed;
@@ -888,9 +1039,13 @@ footer p {
 
 /* RÈGLES D'IMPRESSION (CRITIQUE pour le dossier physique) */
 @media print {
-  body {
-    background-color: #fff;
+  body, .letter-page-body, .cover-page-body {
+    background-color: #fff !important;
     color: #000;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    display: block !important;
   }
   
   .print-actions, header, footer, section:not(.cover-sheet-wrapper) {
@@ -902,10 +1057,10 @@ footer p {
     margin: 0; /* Élimine les en-têtes et pieds de page par défaut du navigateur (Titre, URL, Date, Page) */
   }
 
+  /* Cover page (ancien) */
   .cover-page-body {
     padding: 0;
     margin: 0;
-    background-color: #fff;
   }
 
   .cover-sheet {
@@ -913,7 +1068,7 @@ footer p {
     border: none;
     width: 210mm;
     height: 297mm;
-    padding: 10mm 15mm 15mm 15mm; /* Commencer l'en-tête plus haut à l'impression */
+    padding: 10mm 15mm 15mm 15mm;
     page-break-after: avoid;
     page-break-before: avoid;
     box-sizing: border-box;
@@ -922,7 +1077,50 @@ footer p {
   .cover-summary-box {
     background-color: #fafafa !important;
     border-left: 4px solid #333 !important;
-    -webkit-print-color-adjust: exact; /* Force le fond gris sur Chrome/Safari */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Lettre de motivation */
+  .letter-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    width: 210mm;
+    min-height: 297mm;
+    height: 297mm;
+    padding: 12mm 18mm 12mm 18mm;
+    page-break-after: avoid;
+    page-break-before: avoid;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+
+  .letter-qr-callout {
+    background-color: #fafafa !important;
+    border-left: 4px solid #888 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 10px 14px !important;
+  }
+
+  .letter-qr-callout-text {
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+  }
+
+  .letter-qr-code-wrapper {
+    flex-shrink: 0 !important;
+  }
+
+  .letter-qr-img {
+    width: 72px !important;
+    height: 72px !important;
+    -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 }
@@ -946,5 +1144,20 @@ footer p {
     width: 95%;
     height: auto;
     padding: 20px;
+  }
+
+  .letter-sheet {
+    width: 95%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .letter-sender-name {
+    font-size: 1.3rem;
+  }
+
+  .letter-qr-callout {
+    flex-direction: column;
+    text-align: center;
   }
 }
